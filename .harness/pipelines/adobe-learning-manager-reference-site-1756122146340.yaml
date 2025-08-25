@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_johnykbd_adobe_learning_manager_reference_site_1756122152224
+  name: Build adobe-learning-manager-reference-site
+  orgIdentifier: default
+  projectIdentifier: default_project
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github
+        repoName: johnykbd/adobe-learning-manager-reference-site
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: MacOS
+          runtime:
+            spec: {}
+            type: Docker
+        type: CI
