@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_johnykbd_adobe_learning_manager_reference_site_1756122152224-pr-trigger-input-set
+  identifier: Build_johnykbd_adobe_learning_manager_reference_site_1756122152224prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_johnykbd_adobe_learning_manager_reference_site_1756122152224
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
